@@ -1,0 +1,212 @@
+/* ==========================================================================
+   HERO - EDITORIAL ASYMMETRIC LANDING HERO
+   Typography: Newsreader headline + DM Sans body
+   Right: Real rendered live resume paper preview
+   ========================================================================== */
+
+.hero-section {
+  background-color: var(--color-bg);
+  padding: 4.5rem 0 3.5rem;
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Left Content */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.hero-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  max-width: 580px;
+}
+
+.hero-body {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  padding-top: 0.25rem;
+}
+
+.hero-primary-btn {
+  font-weight: 500;
+}
+
+.hero-secondary-btn {
+  font-weight: 500;
+}
+
+.hero-guarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.guarantee-check {
+  color: var(--color-accent);
+}
+
+/* Right Column: Real rendered resume preview stage */
+.hero-preview-column {
+  position: relative;
+  width: 100%;
+}
+
+.hero-preview-stage {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  box-shadow: 0 10px 30px -10px rgba(27, 27, 26, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hero-stage-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  flex-wrap: wrap;
+}
+
+.toolbar-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hero-template-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-chip {
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  padding: 0.2rem 0.55rem;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.hero-chip:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
+.hero-chip.active {
+  background-color: var(--color-accent-subtle);
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.hero-resume-paper {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  max-height: 480px;
+  overflow-y: auto;
+  /* subtle inner shadow to mimic paper elevation */
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.02);
+}
+
+.hero-resume-paper .printable-resume-sheet {
+  padding: 1.5rem 1.4rem;
+  min-height: auto;
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,95 @@
+/* ==========================================================================
+   DASHBOARD QUICK ACTION CARD STYLES - GORESUME INSPIRED
+   ========================================================================== */
+
+.dashboard-action-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+
+.dashboard-action-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.dashboard-action-card:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.dashboard-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.dashboard-icon-bubble {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: var(--primary-50);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.dashboard-action-card:hover .dashboard-icon-bubble {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.action-badge {
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-50);
+  color: var(--primary);
+  border: 1px solid var(--primary-200);
+}
+
+.dashboard-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.dashboard-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border-light);
+  padding-top: 0.75rem;
+}
+
+.card-arrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: transform var(--transition-fast);
+}
+
+.dashboard-action-card:hover .card-arrow {
+  transform: translateX(3px);
+}

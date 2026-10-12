@@ -1,0 +1,201 @@
+/* ==========================================================================
+   PROFILE - GROUPED SETTINGS & ACCOUNT MANAGEMENT
+   Editorial cards, hairline borders, unsaved changes banner
+   ========================================================================== */
+
+.profile-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+}
+
+.profile-main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+.profile-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Hero Header Card */
+.profile-hero-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-avatar-wrap {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.profile-hero-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 220px;
+}
+
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.profile-name-heading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.profile-sub-role {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.profile-quick-contacts {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+
+.quick-sep {
+  color: var(--color-border-strong);
+}
+
+.profile-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.profile-logout-btn {
+  color: var(--color-error);
+}
+
+.profile-logout-btn:hover {
+  background-color: var(--color-error-bg);
+  border-color: var(--color-error-border);
+}
+
+/* Settings Sections */
+.profile-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-section-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.section-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-xs);
+  background-color: var(--color-surface-subtle);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.section-title-sm {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.section-desc-sm {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
+
+.form-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.security-notice-box {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+}
+
+.security-notice-text {
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* Form Footer */
+.profile-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .profile-hero-card {
+    padding: 1.5rem;
+  }
+  .form-fields-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-hero-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

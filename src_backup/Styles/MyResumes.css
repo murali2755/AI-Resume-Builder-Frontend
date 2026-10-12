@@ -1,0 +1,411 @@
+/* ==========================================================================
+   MY RESUMES PAGE STYLES - GORESUME INSPIRED
+   Clean white cards, blue accents, light background, search & filters
+   ========================================================================== */
+
+.my-resumes-page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+}
+
+.my-resumes-main {
+  flex: 1;
+  padding: 3rem 1.5rem;
+}
+
+.my-resumes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Header Bar */
+.resumes-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.resumes-page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.25rem;
+}
+
+.resumes-page-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Toolbar Row: Search, Filters & Sort */
+.resumes-toolbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 0.875rem 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 280px;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  color: var(--text-light);
+  pointer-events: none;
+}
+
+.search-field {
+  width: 100%;
+  padding: 0.55rem 0.85rem 0.55rem 2.5rem;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.search-field:focus {
+  background-color: #ffffff;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-ring);
+}
+
+.toolbar-controls-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Filter Buttons */
+.filter-pill-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+
+.filter-btn {
+  background: none;
+  border: 1px solid transparent;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-50);
+  border-color: var(--primary-200);
+  color: var(--primary);
+}
+
+/* Sort Selector */
+.sort-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sort-icon {
+  position: absolute;
+  left: 0.75rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.sort-select {
+  padding: 0.45rem 1rem 0.45rem 2.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  outline: none;
+}
+
+.sort-select:focus {
+  border-color: var(--primary);
+}
+
+/* Resumes Cards Grid */
+.my-resumes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.resume-doc-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.resume-doc-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-medium);
+}
+
+.doc-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.15rem;
+}
+
+.doc-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: var(--primary-50);
+  color: var(--primary);
+}
+
+.doc-score-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  background-color: var(--primary-50);
+  border: 1px solid var(--primary-200);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.doc-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doc-card-role {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+}
+
+.doc-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.doc-update-time {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.status-pill {
+  font-size: 0.725rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+}
+
+.status-pill.completed {
+  background-color: var(--success-bg);
+  color: var(--success);
+  border: 1px solid var(--success-border);
+}
+
+.status-pill.in-progress {
+  background-color: var(--warning-bg);
+  color: var(--warning);
+  border: 1px solid var(--warning-border);
+}
+
+/* Completion Progress */
+.doc-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+}
+
+.doc-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.progress-track {
+  height: 6px;
+  background-color: var(--bg-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-smooth);
+}
+
+/* Actions Row */
+.doc-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  margin-top: auto;
+}
+
+.btn-doc-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  background-color: #ffffff;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex: 1;
+}
+
+.btn-doc-action:hover {
+  background-color: var(--bg-subtle);
+  color: var(--primary);
+  border-color: var(--border-medium);
+}
+
+.delete-btn {
+  flex: 0 0 34px;
+  padding: 0.45rem;
+}
+
+.delete-btn:hover {
+  color: var(--danger);
+  border-color: var(--danger-border);
+  background-color: var(--danger-bg);
+}
+
+/* Empty State */
+.resumes-empty-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 4.5rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.empty-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-50);
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.empty-subtext {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 440px;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .my-resumes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .resumes-toolbar-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar-controls-right {
+    justify-content: space-between;
+  }
+
+  .my-resumes-grid {
+    grid-template-columns: 1fr;
+  }
+}
